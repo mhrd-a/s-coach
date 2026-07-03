@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CourtMotion | Step 4 Performance Report</title>
+  <meta name="description" content="CourtMotion AI tennis performance report page." />
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="report" data-step="4">
+  <div class="app-shell">
+    <aside class="sidebar no-print">
+      <a class="brand" href="index.html"><img src="assets/icons/logo.svg" alt="" class="brand-logo" /><span><strong>CourtMotion</strong><small>AI Performance Analysis</small></span></a>
+      <nav class="stepper" aria-label="CourtMotion setup steps">
+        <a class="step" href="index.html"><span class="step-number">1</span><span><strong>Profile</strong><small>Age, gender, hand</small></span></a>
+        <a class="step" href="player-style.html"><span class="step-number">2</span><span><strong>Player Style</strong><small>Top 10 model</small></span></a>
+        <a class="step" href="devices.html"><span class="step-number">3</span><span><strong>Devices</strong><small>Camera & watch</small></span></a>
+        <a class="step is-active" href="report.html"><span class="step-number">4</span><span><strong>Report</strong><small>Final analysis</small></span></a>
+      </nav>
+      <div class="support-card"><span class="circle-icon">?</span><div><p>Need help?</p><a href="mailto:support@example.com">Contact Support</a></div></div>
+      <button class="theme-toggle" id="themeToggle" type="button"><span>Dark Mode</span><span class="toggle-pill"><span></span></span></button>
+      <p class="copyright">© 2026 CourtMotion</p>
+    </aside>
+
+    <main class="main report-main">
+      <header class="topbar no-print">
+        <div><span class="eyebrow">Step 4 of 4</span><h1>Performance Report</h1></div>
+        <div class="topbar-actions"><a class="ghost-btn" href="devices.html">Back</a><button class="ghost-btn" type="button" id="restartBtn">Restart</button><button class="primary-btn small" type="button" id="downloadBtn">Download Report</button></div>
+      </header>
+
+      <section class="report-sheet" id="reportSheet" aria-label="Tennis performance analysis report">
+        <div class="report-hero">
+          <div class="report-info-card">
+            <h2>Tennis Performance<br />Analysis Report <span>2026</span></h2>
+            <dl class="report-meta">
+              <div><dt><img src="assets/icons/person.svg" alt="" /> Player</dt><dd id="reportPlayer">Male Tennis Player</dd></div>
+              <div><dt><img src="assets/icons/calendar.svg" alt="" /> Date</dt><dd id="reportDate">July 3, 2026</dd></div>
+              <div><dt><img src="assets/icons/surface.svg" alt="" /> Surface</dt><dd>Hard Court</dd></div>
+              <div><dt>Model</dt><dd id="reportModel">Jannik Sinner</dd></div>
+              <div><dt>Hand</dt><dd id="reportHand">Right hand</dd></div>
+              <div><dt>Style</dt><dd id="reportStyle">All-Around Player</dd></div>
+            </dl>
+          </div>
+
+          <figure class="report-athlete-final">
+            <img id="reportAthlete" src="assets/players/male-right.png" alt="Report tennis athlete" />
+          </figure>
+
+          <article class="metric-card metric-head"><span class="node"></span><div class="metric-icon"><img src="assets/icons/body.svg" alt="" /></div><h3>Head & Neck <mark>Good</mark></h3><p>Upright and aligned with the spine. Eyes focused forward with stable tracking.</p><b>Improvement</b><p>Keep the head steady during intense rallies.</p></article>
+          <article class="metric-card metric-shoulders"><span class="node"></span><div class="metric-icon"><img src="assets/icons/body.svg" alt="" /></div><h3>Shoulders <mark>Good</mark></h3><p>Relaxed and level. Good range of motion during strokes and serves.</p><b>Improvement</b><p>Maintain relaxation during long exchanges.</p></article>
+          <article class="metric-card metric-wrists"><span class="node"></span><div class="metric-icon"><img src="assets/icons/hand.svg" alt="" /></div><h3>Wrists & Hands <mark>Good</mark></h3><p>Stable grip pressure and good racket-face control through shots.</p><b>Improvement</b><p>Reduce slight wrist lag during serves.</p></article>
+          <article class="metric-card metric-elbows"><span class="node"></span><div class="metric-icon"><img src="assets/icons/elbow.svg" alt="" /></div><h3>Elbows <mark>Good</mark></h3><p>Good alignment and control in preparation and contact.</p><b>Improvement</b><p>Maintain efficient elbow positioning.</p></article>
+          <article class="metric-card metric-hips"><span class="node fair"></span><div class="metric-icon"><img src="assets/icons/hip.svg" alt="" /></div><h3>Hips <mark class="fair">Fair</mark></h3><p>Strong rotation on groundstrokes, with occasional early opening.</p><b>Improvement</b><p>Keep hips closed slightly longer before rotation.</p></article>
+          <article class="metric-card metric-knees"><span class="node"></span><div class="metric-icon"><img src="assets/icons/knee.svg" alt="" /></div><h3>Knees <mark>Good</mark></h3><p>Slightly bent for balance and flexibility. Effective ready position.</p><b>Improvement</b><p>Use knees actively in quick transitions.</p></article>
+          <article class="metric-card metric-ankles"><span class="node"></span><div class="metric-icon"><img src="assets/icons/foot.svg" alt="" /></div><h3>Ankles <mark>Good</mark></h3><p>Good ankle mobility and quick directional recovery.</p><b>Improvement</b><p>Strengthen ankles for explosive push-off.</p></article>
+          <article class="metric-card metric-feet"><span class="node"></span><div class="metric-icon"><img src="assets/icons/foot.svg" alt="" /></div><h3>Feet Positioning <mark>Good</mark></h3><p>Balanced stance and proper weight distribution.</p><b>Improvement</b><p>Anticipate and move earlier for better positioning.</p></article>
+        </div>
+
+        <div class="report-footer-grid">
+          <section class="score-card"><h3>Overall Score</h3><div class="score-ring"><strong id="overallScore">8.5</strong><span>/10</span></div><b>Strong Foundation</b><p>Well-balanced mechanics with efficient movement and control.</p></section>
+          <section class="summary-card"><h3>Key Strengths</h3><ul><li>Stable head and neck with strong focus</li><li>Good shoulder and arm mechanics</li><li>Balanced lower body with active knees and ankles</li><li>Consistent control and coordination</li></ul></section>
+          <section class="summary-card"><h3>Areas to Improve</h3><ul class="warn-list"><li>Hip rotation timing</li><li>Wrist lag during serve</li><li>Anticipation and early movement</li></ul></section>
+          <section class="summary-card recommendation"><h3>Recommendation</h3><p>Continue current training with focus on hip mobility drills, serve refinement, and anticipation footwork exercises.</p></section>
+        </div>
+        <p class="report-disclaimer">Analysis based on performance observation and biomechanical assessment. Use insights to guide training and prevent injury.</p>
+      </section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
