@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Super Coach | Step 2 Player Style</title>
+  <meta name="description" content="Super Coach AI tennis coaching website: select top player style." />
+  <link rel="icon" href="assets/icons/fav-transparent.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="players" data-step="2">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="Super Coach home"><img src="assets/icons/sc-logo-transparent.png" alt="Super Coach" class="brand-logo brand-logo-full" /></a>
+      <nav class="stepper" aria-label="Super Coach setup steps">
+        <a class="step" href="index.html"><span class="step-number">1</span><span><strong>Profile</strong><small>Age, gender, hand</small></span></a>
+        <a class="step is-active" href="player-style.html"><span class="step-number">2</span><span><strong>Player Style</strong><small>Top 10 model</small></span></a>
+        <a class="step" href="devices.html"><span class="step-number">3</span><span><strong>Devices</strong><small>Camera & watch</small></span></a>
+        <a class="step" href="report.html"><span class="step-number">4</span><span><strong>Report</strong><small>Final analysis</small></span></a>
+      </nav>
+      <div class="support-card"><span class="circle-icon">?</span><div><p>Need help?</p><a href="mailto:support@example.com">Contact Support</a></div></div>
+      <button class="theme-toggle" id="themeToggle" type="button"><span>Dark Mode</span><span class="toggle-pill"><span></span></span></button>
+      <p class="copyright">© 2026 Super Coach</p>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><span class="eyebrow">Step 2 of 4</span><h1>Select Player Style</h1></div>
+        <div class="topbar-actions"><a class="ghost-btn" href="index.html">Back</a><button class="ghost-btn" type="button" id="restartBtn">Restart</button></div>
+      </header>
+
+      <section class="panel page-panel">
+        <div class="section-title with-action">
+          <div class="title-row"><span class="section-index">2</span><div><h2>Pick a player to model your game after</h2><p id="playerIntro">The list changes based on the selected gender. Player thumbnails stay square and show headshot-style crops.</p></div></div>
+          <a class="primary-btn small next-action" href="devices.html" id="playersNextBtn">Next: connect devices</a>
+        </div>
+
+        <div class="selection-summary">
+          <figure><img id="miniAthlete" src="assets/players/male-right.png" alt="Selected character" /></figure>
+          <div><strong id="selectionSummaryTitle">Male · Right hand</strong><span id="selectionSummaryText">All-Around Player</span></div>
+          <a class="ghost-btn small" href="index.html">Edit profile</a>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Player gender list tabs">
+          <button class="tab" type="button" data-set="gender" data-value="male">Male <span>ATP Top 10</span></button>
+          <button class="tab" type="button" data-set="gender" data-value="female">Female <span>WTA Top 10</span></button>
+        </div>
+
+        <div class="players-grid" id="playersGrid" aria-live="polite"></div>
+        <p class="source-note" id="rankingNote">Official ATP/WTA rankings are used for the demo list. Player thumbnails use Wikipedia image data when online.</p>
+      </section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

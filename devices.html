@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Super Coach | Step 3 Devices</title>
+  <meta name="description" content="Super Coach AI tennis coaching website: connect camera and smart watch." />
+  <link rel="icon" href="assets/icons/fav-transparent.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="devices" data-step="3">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html" aria-label="Super Coach home"><img src="assets/icons/sc-logo-transparent.png" alt="Super Coach" class="brand-logo brand-logo-full" /></a>
+      <nav class="stepper" aria-label="Super Coach setup steps">
+        <a class="step" href="index.html"><span class="step-number">1</span><span><strong>Profile</strong><small>Age, gender, hand</small></span></a>
+        <a class="step" href="player-style.html"><span class="step-number">2</span><span><strong>Player Style</strong><small>Top 10 model</small></span></a>
+        <a class="step is-active" href="devices.html"><span class="step-number">3</span><span><strong>Devices</strong><small>Camera & watch</small></span></a>
+        <a class="step" href="report.html"><span class="step-number">4</span><span><strong>Report</strong><small>Final analysis</small></span></a>
+      </nav>
+      <div class="support-card"><span class="circle-icon">?</span><div><p>Need help?</p><a href="mailto:support@example.com">Contact Support</a></div></div>
+      <button class="theme-toggle" id="themeToggle" type="button"><span>Dark Mode</span><span class="toggle-pill"><span></span></span></button>
+      <p class="copyright">© 2026 Super Coach</p>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><span class="eyebrow">Step 3 of 4</span><h1>Connect Devices</h1></div>
+        <div class="topbar-actions"><a class="ghost-btn" href="player-style.html">Back</a><button class="ghost-btn" type="button" id="restartBtn">Restart</button></div>
+      </header>
+
+      <section class="page-grid page-grid-devices">
+        <article class="panel form-panel">
+          <div class="section-title"><span class="section-index">3</span><div><h2>Device status</h2><p>Turn the camera and smart watch on or off before generating the final performance report.</p></div></div>
+
+          <div class="device-grid">
+            <article class="device-card" id="cameraDevice">
+              <div class="device-icon"><img src="assets/icons/camera.svg" alt="" /></div>
+              <div><h3>Camera</h3><p>Status: <strong id="cameraStatus" class="device-status pending">Off</strong></p><small id="cameraHint">Toggle on to simulate camera capture for serve, forehand, backhand, and footwork movement.</small></div>
+              <button class="device-toggle" type="button" id="cameraBtn" role="switch" aria-checked="false" aria-label="Turn camera on or off"><span aria-hidden="true"></span><b>Off</b></button>
+            </article>
+
+            <article class="device-card" id="watchDevice">
+              <div class="device-icon"><img src="assets/icons/watch.svg" alt="" /></div>
+              <div><h3>Smart Watch</h3><p>Status: <strong id="watchStatus" class="device-status pending">Off</strong></p><small id="watchHint">Heart rate, acceleration, wrist rotation, and session intensity.</small></div>
+              <button class="device-toggle" type="button" id="watchBtn" role="switch" aria-checked="false" aria-label="Turn smart watch on or off"><span aria-hidden="true"></span><b>Off</b></button>
+            </article>
+          </div>
+
+          <div class="analysis-action" id="preTrainingPanel">
+            <div><h3>Start movement capture</h3><p id="analysisHint">Turn on any devices you want, then start the training countdown.</p></div>
+            <button class="primary-btn large next-action" type="button" id="startTrainingBtn">Start Training</button>
+          </div>
+
+          <div class="training-panel" id="trainingPanel" hidden>
+            <span class="recording-dot"></span>
+            <div>
+              <h3>Training is recording</h3>
+              <p>The site is simulating camera and smart-watch movement capture. Finish the session when the athlete is done.</p>
+              <strong id="trainingTimer">00:00</strong>
+            </div>
+            <button class="primary-btn large next-action" type="button" id="finishTrainingBtn">Training Finished · View Report</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="countdown-overlay" id="countdownOverlay" hidden aria-live="assertive" aria-label="Training countdown">
+    <div class="countdown-card">
+      <span>Get ready</span>
+      <strong id="countdownNumber">3</strong>
+      <p>Movement recording starts after the countdown.</p>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
